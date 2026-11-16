@@ -1,37 +1,19 @@
 import streamlit as st
 
-urls=[
-    'https://www.youtube.com/watch?v=KR8ddnPjCtk',
-    'https://www.youtube.com/watch?v=Gv9_4yMHFhI',
-    'https://www.youtube.com/watch?v=MP8R6kBykzE'
+urls=[''
+   
 
     ]
-images=['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmhSNJGrrK7GNNwzYnikLsOrFAiKTX3xm06-UVMxCGwg&s=10']
-st.title('This is my first webapp')
+images=['https://thumbnail.10x10.co.kr/webimage/image/add1/291/A002910028_01.jpg?cmd=thumb&w=400&h=400&fit=true&ws=false']
+st.title('여러분, 안녕하세요 반갑습니다')
 con1,con2 = st.columns((4,1))
 with con1:
-    with st.expander('Content...'):
-        for i in range(len(urls)):
-            st.video(urls[i])
-        pass
-with con2:
-    with st.expander('Tips...'):
-        st.image(images[0])
-        pass
-
-
-con3,con4 = st.columns((4,1))
-with con3:
-    with st.expander('Content...'):
-       import pandas as pd
-       df = pd.read_csv('./data.csv')
-       st.write(df)
-with con4:
     with st.expander('Tips...'):
         with open('./ml.txt','r', encoding='UTF-8') as f:
             mytxt = f.read()
             st.markdown(mytxt)
             
-        st.image(images[0])
 
+    with st.expander('여기를 누르세요...'):
+        st.image(images[0])
         pass
